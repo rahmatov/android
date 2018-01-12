@@ -620,8 +620,8 @@ public class FileContentProvider extends ContentProvider {
 
         // if both are null, let them pass to query
         if (selectionArgs == null && selection != null) {
-            selection = "(?)";
             selectionArgs = new String[]{selection};
+            selection = "(?)";
         }
 
         sqlQuery.setStrict(true);
